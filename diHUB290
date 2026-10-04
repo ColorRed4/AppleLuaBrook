@@ -364,7 +364,7 @@ local RGBTitle = textLabel(
     13
 )
 
-  RGBTitle.TextColor3 = GRAY
+RGBTitle.TextColor3 = GRAY
 RGBTitle.TextXAlignment = Enum.TextXAlignment.Center
 
 local PaletteHolder = Instance.new("Frame")
@@ -544,7 +544,28 @@ local CodesData = {
     {"Коч братан (фулл)", "118574325152271"},
     {"i got love", "116105881409379"},
     {"Фешин", ""},
-    {"Гимн твича", "95677706212116"}
+    {"Гимн твича", "95677706212116"},
+
+    {"Ты радуга", "92585638502970"},
+    {"Ларп", "71306564835472"},
+    {"Нетаньяху", "84197636580197"},
+    {"Без тебя", "99084115802261"},
+    {"Залетаю в мечеть", "126551933715459"},
+    {"Луксмаксинг", "86503267790406"},
+    {"Сделал миллион", "122036842434614"},
+    {"Громко", "96183066381930"},
+    {"imba dok", "113046329605558"},
+    {"Диско Панцер", "106561102974653"},
+    {"2020", "72628686993059"},
+    {"Туса Медуза", "120206691981778"},
+    {"Коч братан", "88926785631231"},
+    {"На Субару", "84788331299898"},
+    {"Голда V2", "74612331354602"},
+    {"Голда V1", "137501570448783"},
+    {"Таррант ремикс", "105009818909945"},
+    {"Весна 26 V.1", "97746747115329"},
+    {"Весна 26", "91299590639144"},
+    {"Весна 26 V.2", "92406194318429"}
 }
 
 local function copyText(value)
@@ -600,6 +621,7 @@ local InfinityButton = scriptButton("Infinity yield", 40)
 local R4DButton = scriptButton("®4D", 88)
 local TargeterButton = scriptButton("Targeter", 136)
 local BTRButton = scriptButton("Btr X client", 184)
+local AnimationHubButton = scriptButton("Animation Hub", 232)
 
 local MenuButton = Instance.new("TextButton")
 MenuButton.Name = "MenuButton"
@@ -744,7 +766,7 @@ local function stopRGB()
     setNameColor(SelectedColor)
 end
 
-  local startRGB
+local startRGB
 
 startRGB = function()
     RGBEnabled = true
@@ -947,6 +969,14 @@ BTRButton.MouseButton1Click:Connect(function()
     pcall(function()
         loadstring(game:HttpGet(
             "https://btr.btrxclient.workers.dev/loader.lua"
+        ))()
+    end)
+end)
+
+AnimationHubButton.MouseButton1Click:Connect(function()
+    pcall(function()
+        loadstring(game:HttpGet(
+            "https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"
         ))()
     end)
 end)
